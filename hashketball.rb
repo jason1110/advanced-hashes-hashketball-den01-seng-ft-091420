@@ -237,15 +237,18 @@ def winning_team
 home_team_array = []
 away_team_array = []
 game_hash.each do |key, value|
-  if key == :home
-    value[:players].each do |points|
-      home_team_array << points[:points]
-  else if key == :away
-    
-    end
-  end
-  end
+     if key == :home
+       value[:players].each do |points|
+         home_team_array << points[:points]
+       end
+     else if key == :away
+       value[:players].each do |points|
+         away_team_array << points[:points]
+       end 
+     end
+end
 home_team_array
+away_team_array
 binding.pry
 end
 
