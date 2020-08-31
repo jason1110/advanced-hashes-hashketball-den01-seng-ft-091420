@@ -240,11 +240,11 @@ game_hash.each do |key, value|
   if key == :home
     value[:players].each do |points|
       home_team_array << points[:points]
-      binding.pry
     end
   end
   end
-home_team_array  
+home_team_array
+binding.pry
 end
 
 def player_with_longest_name()
