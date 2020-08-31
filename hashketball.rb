@@ -276,7 +276,7 @@ def long_name_steals_a_ton?
     most_steals = value[:players].max_by {|steals| steals[:steals]}[:player_name]
   end
   if player_with_longest_name == most_steals
-   p "#{player_with_longest_name} steals the most"
+    "#{player_with_longest_name} steals the most"
   else
     "Someone else steals a lot"
   end  
