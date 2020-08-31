@@ -226,10 +226,9 @@ end
 #**bonus**
 
 def most_points_scored()
-    biggest_shoe_array = []
+player_with_most_points =""    
   game_hash.each do |key, value|
-    value[:players].each do |shoe|
-      biggest_shoe_array << shoe[:shoe] 
+    player_with_most_points = value[:players].each.max_by {|points| points[:points]}[:player_name]
     end
   end
 biggest_shoe_array.max
