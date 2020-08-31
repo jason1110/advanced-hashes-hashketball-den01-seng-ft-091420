@@ -247,6 +247,7 @@ game_hash.each do |key, value|
        end 
      end
 end
+end
 home_team_array
 away_team_array
 binding.pry
