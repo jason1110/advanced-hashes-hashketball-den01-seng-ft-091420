@@ -238,7 +238,11 @@ home_team_array = []
 away_team_array = []
 game_hash.each do |key, value|
   if key == :home
-    value[]
+    value[:players].each do |points|
+      home_team_array << points[:points]
+      binding.pry
+    end
+  end
 end
 
 def player_with_longest_name()
