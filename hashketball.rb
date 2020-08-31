@@ -229,7 +229,6 @@ def most_points_scored
 player_with_most_points =""    
   game_hash.each do |key, value|
     player_with_most_points = value[:players].each.max_by {|points| points[:points]}[:player_name]
-    end
   end
 player_with_most_points
 binding.pry
