@@ -264,9 +264,9 @@ def player_with_longest_name
   longest_name = ""
   game_hash.each do |key, value|
     longest_name = value[:players].max_by {|name|  name[:player_name].length}[:player_name]
-  return longest_name
-binding.pry
   end
+longest_name 
+binding.pry
 end
   
 #**super bonus**
