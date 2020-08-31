@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
@@ -126,4 +127,125 @@ def game_hash
   }
 end
 
-# Write code here
+#*********Helpers**************
+def get_all_players
+
+players_array = game_hash[:home][:players] << game_hash[:away][:players]
+players_array
+end
+
+
+def get_team(team)
+  case team
+  when game_hash[:home][:team_name]
+    game_hash[:home]
+  when game_hash[:away][:team_name]
+    game_hash[:away]
+  end
+end
+
+def team_players(team)
+  case team
+  when game_hash[:home][:team_name]
+    game_hash[:home][:players][0]
+  when game_hash[:away][:team_name]
+    game_hash[:away][:players][0]
+  end
+end
+
+
+#**************End Helpers**************
+
+def num_points_scored(player)
+player_points = 0
+
+  game_hash.each do |key, value|
+    value[:players].each do |name|
+      if player == name[:player_name]
+        player_points = name[:points]
+      end 
+    end 
+  end  
+player_points  
+end
+
+def shoe_size(player)
+  player_shoe_size = 0
+
+  game_hash.each do |key, value|
+    value[:players].each do |name|
+      if player == name[:player_name]
+        player_shoe_size = name[:shoe]
+      end 
+    end 
+  end  
+player_shoe_size  
+end
+
+def team_colors(team)
+  get_team(team)[:colors]
+end
+
+def team_names
+ team_name_array = []
+  game_hash.each do |key, value|
+      team_name_array << value[:team_name]
+  end  
+team_name_array 
+end
+
+def player_numbers(team)
+  array_of_numbers = []
+  get_team(team)[:players].each do |numbers|
+      array_of_numbers << numbers[:number]
+  end  
+array_of_numbers
+end
+
+def player_stats(player)
+stat_hash = {}
+  game_hash.each do |key, value|
+    value[:players].each do |name|
+      if player == name[:player_name]
+        stat_hash = name
+      end  
+    end
+  end 
+stat_hash  
+end
+
+def big_shoe_rebounds
+  game_hash.each do |key, value|
+    value[:players].max_by{|shoe| shoe[:shoe]}[:rebounds]
+binding.pry
+  end
+end
+
+
+#**bonus**
+
+def most_points_scored()
+    biggest_shoe_array = []
+  game_hash.each do |key, value|
+    value[:players].each do |shoe|
+      biggest_shoe_array << shoe[:shoe] 
+    end
+  end
+biggest_shoe_array.max
+binding.pry
+end  
+
+def winning_team()
+
+end
+
+def player_with_longest_name()
+  
+end
+  
+#**super bonus**
+
+def long_name_steals_a_ton?()
+  
+end  
+binding.pry
