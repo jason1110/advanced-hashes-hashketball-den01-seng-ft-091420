@@ -236,6 +236,8 @@ end
 def winning_team
 home_team_array = []
 away_team_array = []
+home_team total = 0
+away_team_total = 0
 game_hash.each do |key, value|
      if key == :home
        value[:players].each do |points|
@@ -248,7 +250,7 @@ game_hash.each do |key, value|
      end
 end
 end
-home_team_array.reduce(0) {|total, num| total + num}
+home_team total = home_team_array.reduce(0) {|total, num| total + num}
 away_team_array.reduce(0) {|total, num| total + num}
 binding.pry
 end
