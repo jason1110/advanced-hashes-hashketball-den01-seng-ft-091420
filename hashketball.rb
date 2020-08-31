@@ -266,7 +266,6 @@ def player_with_longest_name
     longest_name = value[:players].max_by {|name|  name[:player_name].length}[:player_name]
   end
 longest_name 
-binding.pry
 end
   
 #**super bonus**
