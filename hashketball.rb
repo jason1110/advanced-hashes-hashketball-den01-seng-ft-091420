@@ -260,8 +260,8 @@ else
 end
 end
 
-def player_with_longest_name()
-  
+def player_with_longest_name
+  game_hash.each
 end
   
 #**super bonus**
