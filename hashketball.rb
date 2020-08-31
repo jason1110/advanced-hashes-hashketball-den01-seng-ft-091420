@@ -240,6 +240,7 @@ game_hash.each do |key, value|
   if key == :home
     value[:players].each do |points|
       home_team_array << points[:points]
+  else if key == :away    
     end
   end
   end
