@@ -236,7 +236,7 @@ end
 def winning_team
 home_team_array = []
 away_team_array = []
-home_team total = 0
+home_team_total = 0
 away_team_total = 0
 game_hash.each do |key, value|
      if key == :home
