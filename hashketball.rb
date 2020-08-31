@@ -254,9 +254,9 @@ home_team_total = home_team_array.reduce(0) {|total, num| total + num}
 away_team_total = away_team_array.reduce(0) {|total, num| total + num}
 
 if home_team_total > away_team_total
-  "The Nets win!!"
+  return "The Nets win!!"
 else
-  "The Hornets Win"
+  return "The Hornets Win"
 end
 binding.pry
 end
