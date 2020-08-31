@@ -254,11 +254,10 @@ home_team_total = home_team_array.reduce(0) {|total, num| total + num}
 away_team_total = away_team_array.reduce(0) {|total, num| total + num}
 
 if home_team_total > away_team_total
-  return "The #{game_hash[:home][:team_name]} win!!"
+  return 'The #{game_hash[:home][:team_name]} win!!'
 else
-  return "The Hornets Win"
+  return 'The #{game_hash[:away][:team_name]} Win!!'
 end
-binding.pry
 end
 
 def player_with_longest_name()
