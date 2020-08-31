@@ -254,9 +254,9 @@ home_team_total = home_team_array.reduce(0) {|total, num| total + num}
 away_team_total = away_team_array.reduce(0) {|total, num| total + num}
 
 if home_team_total > away_team_total
-  return 'The #{game_hash[:home][:team_name]} win!!'
+  return "The #{game_hash[:home][:team_name]} win!!"
 else
-  return 'The #{game_hash[:away][:team_name]} Win!!'
+  return "The #{game_hash[:away][:team_name]} Win!!"
 end
 end
 
@@ -265,7 +265,7 @@ def player_with_longest_name
   game_hash.each do |key, value|
     longest_name = value[:players].max_by {|name|  name[:player_name].length}[:player_name]
   end
-p longest_name 
+longest_name 
 end
   
 #**super bonus**
@@ -276,4 +276,3 @@ end
 
 
 
-player_with_longest_name
