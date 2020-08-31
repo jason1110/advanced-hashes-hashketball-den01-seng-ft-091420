@@ -236,7 +236,9 @@ end
 def winning_team()
 home_team_array = []
 away_team_array = []
-
+game_hash.each do |key, value|
+  if key == :home
+    value[]
 end
 
 def player_with_longest_name()
