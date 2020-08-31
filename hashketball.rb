@@ -233,7 +233,7 @@ player_with_most_points =""
 player_with_most_points
 end  
 
-def winning_team()
+def winning_team
 home_team_array = []
 away_team_array = []
 game_hash.each do |key, value|
@@ -242,6 +242,7 @@ game_hash.each do |key, value|
       home_team_array << points[:points]
       binding.pry
     end
+  end
   end
 end
 
