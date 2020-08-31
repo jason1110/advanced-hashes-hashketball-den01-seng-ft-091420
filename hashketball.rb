@@ -231,7 +231,6 @@ player_with_most_points =""
     player_with_most_points = value[:players].each.max_by {|points| points[:points]}[:player_name]
   end
 player_with_most_points
-binding.pry
 end  
 
 def winning_team()
