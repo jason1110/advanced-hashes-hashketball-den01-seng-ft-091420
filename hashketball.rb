@@ -244,6 +244,7 @@ game_hash.each do |key, value|
     end
   end
   end
+home_team_array  
 end
 
 def player_with_longest_name()
