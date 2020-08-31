@@ -234,6 +234,8 @@ player_with_most_points
 end  
 
 def winning_team()
+home_team_array = []
+away_team_array = []
 
 end
 
