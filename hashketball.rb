@@ -248,7 +248,7 @@ game_hash.each do |key, value|
      end
 end
 end
-home_team_array.map {|num| num + num}
+home_team_array.reduce(0) {|total, num| total + num}
 away_team_array.reduce(0) {|total, num| total + num}
 binding.pry
 end
