@@ -225,13 +225,13 @@ end
 
 #**bonus**
 
-def most_points_scored()
+def most_points_scored
 player_with_most_points =""    
   game_hash.each do |key, value|
     player_with_most_points = value[:players].each.max_by {|points| points[:points]}[:player_name]
     end
   end
-biggest_shoe_array.max
+player_with_most_points
 binding.pry
 end  
 
