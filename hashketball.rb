@@ -248,8 +248,8 @@ game_hash.each do |key, value|
      end
 end
 end
-home_team_array
-away_team_array
+home_team_array.reduce
+away_team_array.reduce
 binding.pry
 end
 
